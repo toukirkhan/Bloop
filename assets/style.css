@@ -1,0 +1,29 @@
+:root { color-scheme: dark; font: 16px system-ui, sans-serif; background: #11162a; color: #eef2ff; }
+* { box-sizing: border-box; }
+body { margin: 0; background: radial-gradient(ellipse at top, #293463, transparent 65%); min-height: 100vh; }
+main { width: min(800px, 100% - 32px); margin: auto; padding: 48px 0; }
+header { margin-bottom: 28px; }
+header p, small, #connection, .heading span { color: #bec9ea; }
+.eyebrow { font-size: .75rem; letter-spacing: .18em; font-weight: 750; }
+h1 { font-size: clamp(4rem, 12vw, 7rem); line-height: .9; margin: 12px 0; letter-spacing: -.09em; }
+h1 span { color: #84c8ff; }
+h2 { font-size: 1.05rem; margin: 0 0 14px; }
+.cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+section { background: #1b2441; border: 1px solid #39466d; border-radius: 20px; padding: 20px; min-width: 0; }
+.heading { display: flex; justify-content: space-between; gap: 8px; }
+canvas { width: 100%; display: block; background: #0d1327; border-radius: 12px; }
+button, input { font: inherit; border-radius: 10px; border: 1px solid #56658e; }
+button { cursor: pointer; }
+button:focus-visible, input:focus-visible { outline: 2px solid #a9d9ff; outline-offset: 3px; }
+#icons { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+#icons button { background: #263254; min-width: 42px; min-height: 42px; }
+#icons button[aria-pressed="true"] { background: #3e5485; border-color: #a9d9ff; }
+form { display: grid; gap: 8px; }
+input { min-width: 0; width: 100%; padding: 10px; background: #111a32; color: inherit; }
+#send { background: #a9d9ff; color: #102447; font-weight: 750; padding: 10px; margin-top: 8px; }
+#send:disabled { opacity: .55; cursor: default; }
+#feedback { margin: 12px 0 0; color: #a9d9ff; }
+.queue { margin-top: 16px; }
+ul { margin: 0; padding: 0; list-style: none; }
+li { padding: 8px 0; border-top: 1px solid #39466d; overflow-wrap: anywhere; }
+@media (max-width: 580px) { .cards { grid-template-columns: 1fr; } main { padding: 28px 0; } }

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bloop · A tiny LED mailbox</title>
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./bloop.js"></script>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">A TINY LED MAILBOX</p>
+      <h1>Bloop<span>.</span></h1>
+      <p>Send a little something to the Arduino.</p>
+    </header>
+    <div class="cards">
+      <section aria-labelledby="preview-title">
+        <div class="heading"><h2 id="preview-title">Matrix preview</h2><span>13 × 8</span></div>
+        <canvas id="matrix" width="286" height="176" aria-label="Preview of the 13 by 8 LED matrix"></canvas>
+        <p id="connection" role="status">Connecting to the matrix…</p>
+      </section>
+      <section aria-labelledby="compose-title">
+        <h2 id="compose-title">Make a Bloop</h2>
+        <div id="icons" aria-label="Emoji picker" role="group"></div>
+        <form>
+          <label for="text">Or write a message</label>
+          <input id="text" maxlength="40" placeholder="HELLO, WORLD!" autocomplete="off">
+          <small>Up to 40 English letters, numbers or ! ? . , - '</small>
+          <button id="send" type="submit" disabled>Send a Bloop ↗</button>
+        </form>
+        <p id="feedback" role="status"></p>
+      </section>
+    </div>
+    <section class="queue" aria-labelledby="queue-title">
+      <div class="heading"><h2 id="queue-title">The queue</h2><span id="waiting">0 waiting</span></div>
+      <ul id="messages"><li>No Bloops yet.</li></ul>
+    </section>
+  </main>
+</body>
+</html>
