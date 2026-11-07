@@ -1,0 +1,5 @@
+name: Bloop
+icon: 💙
+description: A tiny message board for the UNO Q LED matrix.
+bricks:
+  - arduino:web_ui
